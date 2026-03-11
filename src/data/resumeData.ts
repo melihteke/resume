@@ -217,7 +217,7 @@ export const resumeData = {
       ],
       skills: [],
     },
-  ],
+],
 
   education: [
     {
