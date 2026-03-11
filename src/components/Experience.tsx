@@ -42,7 +42,7 @@ export default function Experience() {
                     <div className="flex items-start gap-3">
                       {exp.logoUrl && (
                         <Image
-                          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${exp.logoUrl}`}
+                          src={exp.logoUrl}
                           alt={exp.company}
                           width={40}
                           height={40}

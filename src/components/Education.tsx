@@ -32,7 +32,7 @@ export default function Education() {
                 <div className="flex items-start gap-3">
                   {edu.logoUrl && (
                     <Image
-                      src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${edu.logoUrl}`}
+                      src={edu.logoUrl}
                       alt={edu.institution}
                       width={40}
                       height={40}

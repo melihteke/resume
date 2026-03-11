@@ -39,7 +39,7 @@ export default function Hero() {
           {resumeData.avatarUrl && !imgError ? (
             <div className="mx-auto mb-8 w-36 h-36 md:w-40 md:h-40 rounded-full overflow-hidden shadow-2xl ring-4 ring-blue-500/30 ring-offset-2 ring-offset-slate-900">
               <Image
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${resumeData.avatarUrl}`}
+                src={resumeData.avatarUrl}
                 alt={resumeData.name}
                 width={320}
                 height={320}

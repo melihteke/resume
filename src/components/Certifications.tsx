@@ -32,7 +32,7 @@ export default function Certifications() {
             >
               {cert.logoUrl ? (
                 <Image
-                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${cert.logoUrl}`}
+                  src={cert.logoUrl}
                   alt={`${cert.issuer} logo`}
                   width={56}
                   height={56}
