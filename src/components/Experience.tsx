@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { resumeData } from "@/data/resumeData";
 
 export default function Experience() {
@@ -40,9 +41,11 @@ export default function Experience() {
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-3">
                     <div className="flex items-start gap-3">
                       {exp.logoUrl && (
-                        <img
-                          src={exp.logoUrl}
+                        <Image
+                          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${exp.logoUrl}`}
                           alt={exp.company}
+                          width={40}
+                          height={40}
                           className="w-10 h-10 object-contain rounded mt-0.5 shrink-0"
                         />
                       )}

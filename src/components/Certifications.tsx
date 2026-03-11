@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { resumeData } from "@/data/resumeData";
 
 export default function Certifications() {
@@ -30,9 +31,11 @@ export default function Certifications() {
               className="bg-white rounded-xl p-6 border border-slate-100 hover:border-blue-200 hover:shadow-md transition-all"
             >
               {cert.logoUrl ? (
-                <img
-                  src={cert.logoUrl}
+                <Image
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${cert.logoUrl}`}
                   alt={`${cert.issuer} logo`}
+                  width={56}
+                  height={56}
                   className="w-14 h-14 object-contain mb-4"
                 />
               ) : (

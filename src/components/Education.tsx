@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { resumeData } from "@/data/resumeData";
 
 export default function Education() {
@@ -30,9 +31,11 @@ export default function Education() {
               <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                 <div className="flex items-start gap-3">
                   {edu.logoUrl && (
-                    <img
-                      src={edu.logoUrl}
+                    <Image
+                      src={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}${edu.logoUrl}`}
                       alt={edu.institution}
+                      width={40}
+                      height={40}
                       className="w-10 h-10 object-contain rounded mt-0.5 shrink-0"
                     />
                   )}
